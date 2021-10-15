@@ -1,0 +1,40 @@
+{
+  "name": "@seiyab/lycle",
+  "version": "0.0.0",
+  "description": "utility for lifecycle",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint src/ --ext .ts && prettier -c src",
+    "format": "prettier -w src",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint"
+  },
+  "files": [
+    "/lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seiyab/lycle-js"
+  },
+  "homepage": "https://github.com/seiyab/lycle-js",
+  "author": "seiyab",
+  "license": "MIT",
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^15.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "eslint": "^7.25.0",
+    "eslint-config-prettier": "^8.3.0",
+    "jest": "^27.0.5",
+    "prettier": "^2.2.1",
+    "ts-jest": "^27.0.5",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  }
+}
